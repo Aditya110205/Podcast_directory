@@ -10,4 +10,7 @@ class Settings:
     DB_PASSWORD = os.getenv("DB_PASSWORD")
     DB_NAME = os.getenv("DB_NAME")
 
+    
+    YOUTUBE_API_KEY = os.getenv("YOUTUBE_API_KEY")   # ✅ ADD THIS
+
 settings = Settings()

@@ -13,3 +13,8 @@ app.include_router(podcast.router)
 @app.get("/")
 def read_root():
     return {"message": "Podcast API running 🚀"}
+
+from app.routes import podcast, episode
+
+app.include_router(podcast.router)
+app.include_router(episode.router)

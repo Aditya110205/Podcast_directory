@@ -1,4 +1,5 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
+from app.schemas.episode import EpisodeResponse
 
 class PodcastBase(BaseModel):
     title: str
@@ -12,4 +13,7 @@ class PodcastResponse(PodcastBase):
     id: int
 
     class Config:
-        from_attributes = True   # for SQLAlchemy
+        from_attributes = True
+
+class PodcastWithEpisodes(PodcastResponse):
+    episodes: list[EpisodeResponse] = Field(default_factory=list)
