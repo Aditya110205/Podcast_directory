@@ -11,6 +11,7 @@ class Settings:
     DB_NAME = os.getenv("DB_NAME")
 
     
-    YOUTUBE_API_KEY = os.getenv("YOUTUBE_API_KEY")   # ✅ ADD THIS
+    YOUTUBE_API_KEY = os.getenv("YOUTUBE_API_KEY")  # ✅ ADD THIS
+    OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
 
 settings = Settings()
